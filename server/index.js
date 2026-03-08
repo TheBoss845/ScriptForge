@@ -21,7 +21,12 @@ const User = mongoose.model('User', userSchema);
 const Script = mongoose.model('Script', scriptSchema);
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-const client = new Anthropic();
+
+if (!process.env.ANTHROPIC_API_KEY) {
+    console.warn('⚠️ Missing ANTHROPIC_API_KEY. Claude-powered endpoints will fail until it is configured.');
+}
+
+const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];

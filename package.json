@@ -1,1 +1,21 @@
-{\n  "name": "scriptforge-backend",\n  "version": "1.0.0",\n  "description": "Backend for ScriptForge",\n  "main": "index.js",\n  "scripts": {\n    "start": "node index.js"\n  },\n  "dependencies": {\n    "express": "^4.17.1",\n    "mongodb": "^3.6.6",\n    "jsonwebtoken": "^8.5.1",\n    "stripe": "^8.0.0",\n    "nodemailer": "^6.4.6",\n    "claude-ai": "^1.0.0"\n  },\n  "author": "TheBoss845",\n  "license": "ISC"\n}
+{
+  "name": "scriptforge-backend",
+  "version": "1.0.0",
+  "description": "Backend for ScriptForge",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.0",
+    "stripe": "^17.2.0"
+  },
+  "author": "TheBoss845",
+  "license": "ISC"
+}
